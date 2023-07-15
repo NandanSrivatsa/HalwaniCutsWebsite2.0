@@ -1,54 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HalwaniCuts</title>
-  </head>
-  <body background="BarberBackground.jpg">
+    <title>Halwani Cuts</title>
+    <style>
+        body {
+            background-image: url("BarberBackground.jpg");
+            background-size: cover;
+            font-family: "Arial", sans-serif;
+            color: black;
+        }
 
-    <h1 align="center">Halwani Cuts</h1>
-    <h2 align="center">Cheap amazing haircuts for men @ 1190 Windrush Dr, L6M 1T9, Oakville</h2>
-	<h3 align="center">Monday: 11:30AM - 2:00PM<br>Tuesday: 11:30AM - 2:00PM<br>Wednesday: 11:30AM - 2:00PM<br>Thursday: 11:30AM - 2:00PM<br>Friday: 11:30AM - 2:00PM<br>Saturday: Closed<br>Sunday: Closed<br>
-	<h3 align="center">Contact @ (365) 996-0555 or karim.h6002@gmail.com<br>
-	<h3 align="center">___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</h3>
+        h1, h2, h3 {
+            text-align: center;
+            color: black;
+        }
 
-    <h3>Haircuts: $25</h3>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
-    <img src="images/SaifHaircut.jpg" height="225">
-    <img src="images/IsaiahCut.jpeg" height="225" alt="faded curl top"> <br>
+        .item {
+            flex: 1 1 300px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    <button name="book_haircut" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">
-      Book haircut
-    </button>
+        .item img {
+            width: 100%;
+            height: auto;
+        }
 
-    <h3>Hiarcut + Beard/Enhancements: $30</h3>
+        .item img.senior-cut {
+            clip-path: inset(0 0 100px 0);
+        }
 
-    <img src="images/ArabManBeard.jpg" height="225">
-    <img src="images/RandomArabKidCut.jpeg" height="225"> <br>
+        .item button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-    <button name="book_full" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">
-      Book cut + beard
-    </button>
+        .item button.kids-seniors {
+            margin-top: -100px;
+        }
 
+        .item button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
 
-    <h3>Lineup/Beard: $10</h3>
+<body>
+    <h1>Halwani Cuts</h1>
+    <h2>Cheap amazing haircuts for men @ 1190 Windrush Dr, L6M 1T9, Oakville</h2>
+    <h3>Monday: 11:30AM - 2:00PM<br>Tuesday: 11:30AM - 2:00PM<br>Wednesday: 11:30AM - 2:00PM<br>Thursday: 11:30AM - 2:00PM<br>Friday: 11:30AM - 2:00PM<br>Saturday: Closed<br>Sunday: Closed<br>
+        <a href="mailto:karim.h6002@gmail.com">Contact HalwaniCuts via email or call at (365) 996-0555</a></h3>
+    <h3>___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</h3>
 
-    <img src="images/RaduRomanovschi.jpg" height="225" width="225">
-    <img src="images/OmarJrHaircut.jpg" height="225" width="225"> <br>
+    <div class="container">
+        <div class="item">
+            <h3>Haircuts: $25 + $3 for enhancements</h3>
+            <img src="images/SaifHaircut.jpg" alt="Saif's Haircut">
+            <img src="images/IsaiahCut.jpeg" alt="Faded Curl Top">
+            <button name="book_haircut" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">Book haircut</button>
+        </div>
+        <div class="item">
+            <h3>Haircut + Beard/Enhancements: $30</h3>
+            <img src="images/ArabManBeard.jpg" alt="Arab Man with Beard">
+            <img src="images/RandomArabKidCut.jpeg" alt="Random Arab Kid's Cut">
+            <button name="book_full" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">Book cut + beard</button>
+        </div>
+        <div class="item">
+            <h3>Lineup/Beard: $10</h3>
+            <img src="images/RaduRomanovschi.jpg" alt="Radu Romanovschi">
+            <img src="images/OmarJrHaircut.jpg" alt="Omar Jr.'s Haircut">
+            <button name="book_lineup" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">Book lineup</button>
+        </div>
+        <div class="item">
+            <h3>Kids and Seniors Haircut: $20.00</h3>
+            <img src="images/DanielUngaCut.png" alt="Daniel Unga's Haircut">
+            <img src="images/SeniorCut.jpg" alt="Senior's Haircut" class="senior-cut">
+            <button name="book_reduced" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'" class="kids-seniors">Book senior/kids cut</button>
+        </div>
+    </div>
+</body>
 
-    <button name="book_lineup" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">
-      Book lineup
-    </button>
-
-    <h3>Kids and Seniors Haircut: $17.50</h3>
-
-    <img src="images/DanielUngaCut.png" height="225" width="225">
-    <img src="images/SeniorCut.jpg" height="225" width="225"> <br>
-
-    <button name="book_reduced" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">
-      Book senior/kids cut
-    </button>
-
-  </body>
 </html>
