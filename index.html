@@ -39,14 +39,14 @@
         }
 
         .item img.senior-cut {
-            clip-path: inset(0 0 100px 0);
+            clip-path: inset(0 0 100px );
         }
 
         .item button {
             display: block;
             width: 100%;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #0ca511;
             color: white;
             border: none;
             text-align: center;
@@ -59,8 +59,15 @@
             margin-top: -100px;
         }
 
+        .item button.see-work {
+            margin-top: 50px;
+            width: 900px;
+            height: 100px;
+            background-color: red;
+        }
+
         .item button:hover {
-            background-color: #45a049;
+            background-color: #0016da;
         }
     </style>
 </head>
@@ -89,13 +96,17 @@
             <h3>Lineup/Beard: $10</h3>
             <img src="images/RaduRomanovschi.jpg" alt="Radu Romanovschi">
             <img src="images/OmarJrHaircut.jpg" alt="Omar Jr.'s Haircut">
-            <button name="book_lineup" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">Book lineup</button>
+            <button name="book_l
+            ineup" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'">Book lineup</button>
         </div>
         <div class="item">
             <h3>Kids and Seniors Haircut: $20.00</h3>
             <img src="images/DanielUngaCut.png" alt="Daniel Unga's Haircut">
             <img src="images/SeniorCut.jpg" alt="Senior's Haircut" class="senior-cut">
             <button name="book_reduced" type="button" onclick="location.href='https://booksy.com/en-ca/13389_halwanicuts_barbers_773207_oakville'" class="kids-seniors">Book senior/kids cut</button>
+        </div>
+        <div class="item">
+            <button name="See_Karims_Work" onclick="location.href='https://nandansrivatsa.github.io/ImagePageHalwaniCuts/'" class="see-work">See Karims Work</button>
         </div>
     </div>
 </body>
